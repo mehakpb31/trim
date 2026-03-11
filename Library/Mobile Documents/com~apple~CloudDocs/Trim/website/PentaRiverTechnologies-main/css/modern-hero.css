@@ -1,0 +1,506 @@
+/**
+ * Modern Hero Section Styles for Pentariver website
+ * Contains styles for hero section, features, services, about section, and testimonials
+ */
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hero Section Overlay - Dark */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Hero Section Overlay - Gradient */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.4) 0, rgba(52, 73, 94, 0.4) 100%);
+    z-index: 0;
+}
+
+/* Hero Content Container */
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Hero Buttons Container */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hero Button Styles */
+.hero-buttons .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all .3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Button Style */
+.hero-buttons .btn-primary {
+    background: linear-gradient(135deg, #e67e22 0, #d35400 100%);
+    border: 0;
+    color: white;
+}
+
+.hero-buttons .btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f39c12 0, #e67e22 100%);
+}
+
+/* Outline Button Style */
+.hero-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+}
+
+.hero-buttons .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section Styles */
+.features {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Features Section Background Elements */
+.features::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.05) 0, rgba(52, 152, 219, 0.05) 100%);
+    z-index: 0;
+}
+
+.features::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0, rgba(230, 126, 34, 0.05) 100%);
+    z-index: 0;
+}
+
+.features .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Service Card Styles */
+.service-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all .3s ease;
+    margin-bottom: 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Icon Container */
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.15) 0, rgba(52, 152, 219, 0.15) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all .3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(10deg);
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.25) 0, rgba(52, 152, 219, 0.25) 100%);
+}
+
+/* Service Icon */
+.service-icon i {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #e67e22 0, #3498db 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Service Title */
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Service Description */
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Service Card Button */
+.service-card .btn {
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    background: transparent;
+    color: #2c3e50;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.service-card .btn:hover {
+    background: linear-gradient(135deg, #e67e22 0, #3498db 100%);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section Styles */
+.about {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+/* About Content Container */
+.about-content {
+    padding: 2rem;
+    height: 100%;
+}
+
+/* About Section Heading */
+.about-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* About Section Heading Underline */
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #e67e22, #3498db);
+}
+
+/* About Section Text */
+.about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Feature Item Styles */
+.feature-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all .3s ease;
+    background-color: #f8f9fa;
+}
+
+.feature-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Feature Icon Container */
+.feature-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.15) 0, rgba(52, 152, 219, 0.15) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    transition: all .3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: rotate(10deg);
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.25) 0, rgba(52, 152, 219, 0.25) 100%);
+}
+
+/* Feature Icon */
+.feature-icon i {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #e67e22 0, #3498db 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Feature Content */
+.feature-content h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: .3rem;
+}
+
+.feature-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* About Image Container */
+.about-img {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+
+.about-img:hover img {
+    transform: scale(1.05);
+}
+
+/* Testimonial Slider Styles */
+.testimonial-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+/* Testimonial Card */
+.testimonial {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+/* Testimonial Content */
+.testimonial-content {
+    margin-bottom: 2rem;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Testimonial Author */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.testimonial-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: .2rem;
+}
+
+.testimonial-position {
+    font-size: .9rem;
+    color: #777;
+}
+
+/* Slider Controls */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.slider-controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #e67e22 0, #3498db 100%);
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .about-content {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 8rem 0 6rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .about-content h2 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-title {
+        font-size: 1.3rem;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+}

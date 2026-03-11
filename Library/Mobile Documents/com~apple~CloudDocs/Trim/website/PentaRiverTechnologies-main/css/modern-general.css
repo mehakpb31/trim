@@ -1,0 +1,1353 @@
+/**
+ * Modern General Styles for Pentariver website
+ * Contains styles for FAQ section, CTA section, and footer
+ */
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 5rem 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* FAQ Section Background Element */
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.05) 0, rgba(52, 152, 219, 0.05) 100%);
+    z-index: 0;
+}
+
+/* FAQ Container */
+.faq-container {
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FAQ Item */
+.faq-item {
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Question */
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: all .3s ease;
+}
+
+.faq-item.active .faq-question {
+    border-bottom-color: #f0f0f0;
+}
+
+.faq-question h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    transition: all .3s ease;
+}
+
+.faq-item:hover .faq-question h4 {
+    color: #e67e22;
+}
+
+.faq-question i {
+    font-size: 1rem;
+    color: #e67e22;
+    transition: all .3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+}
+
+/* FAQ Answer */
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Call to Action Section Styles */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #2c3e50 0, #34495e 100%);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* CTA Background Image Overlay */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: .1;
+    z-index: 0;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* CTA Heading */
+.cta-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+/* CTA Text */
+.cta-section p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+/* CTA Buttons Container */
+.cta-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* CTA Button Styles */
+.cta-buttons .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all .3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Primary Button */
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, #e67e22 0, #d35400 100%);
+    border: 0;
+    color: white;
+}
+
+.cta-buttons .btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f39c12 0, #e67e22 100%);
+}
+
+/* CTA Outline Button */
+.cta-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+}
+
+.cta-buttons .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER v2 – Senior UI/UX Redesign
+   Professional, modern, fully responsive
+   ═══════════════════════════════════════════════════ */
+
+/* ── Base Container ── */
+.footer-v2 {
+    background: linear-gradient(180deg, #0d1b2a 0%, #0a1628 100%);
+    color: #c8d8ec;
+    position: relative;
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+    overflow: hidden;
+}
+
+.footer-v2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #e67e22, #f5a623, #3498db, #2980b9);
+    background-size: 200% 100%;
+    animation: ft-gradient-shift 6s linear infinite;
+}
+
+@keyframes ft-gradient-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.footer-v2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse 800px 300px at 10% 0%, rgba(230, 126, 34, 0.08), transparent 60%),
+        radial-gradient(ellipse 600px 250px at 90% 0%, rgba(52, 152, 219, 0.07), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer-v2 > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── CTA Band ── */
+.ft-cta {
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.12) 0%, rgba(52, 152, 219, 0.1) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.75rem 0;
+}
+
+.ft-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.ft-cta-text h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.ft-cta-text p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: rgba(200, 216, 236, 0.85);
+}
+
+.ft-cta-btns {
+    display: flex;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.ft-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.15rem;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    white-space: nowrap;
+}
+
+.ft-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    color: #fff;
+    text-decoration: none;
+}
+
+.ft-btn i {
+    font-size: 0.92rem;
+}
+
+.ft-btn-call {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.ft-btn-wa {
+    background: linear-gradient(135deg, #25d366, #1db954);
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.ft-btn-quote {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+/* ── Main Body Grid ── */
+.ft-body {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+    overflow: hidden;
+}
+
+/* ── Columns ── */
+.ft-col {
+    min-width: 0;
+}
+
+/* Brand column */
+.ft-brand .ft-logo {
+    max-height: 70px;
+    width: auto;
+    margin-bottom: 1rem;
+    opacity: 0.92;
+}
+
+.ft-brand > p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: rgba(200, 216, 236, 0.78);
+    margin: 0 0 1.25rem;
+}
+
+/* Social icons */
+.ft-social {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.ft-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(200, 216, 236, 0.85);
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.ft-social a:hover {
+    background: linear-gradient(135deg, #e67e22, #f5a623);
+    border-color: transparent;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(230, 126, 34, 0.3);
+}
+
+.ft-social-sm {
+    display: none;
+}
+
+/* Column headings */
+.footer-v2 h4 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.65rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-v2 h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #e67e22, #f5a623);
+}
+
+/* Link lists */
+.ft-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ft-links li {
+    margin-bottom: 0.6rem;
+}
+
+.ft-links a {
+    color: rgba(200, 216, 236, 0.75);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    transition: color 0.2s, transform 0.2s;
+    position: relative;
+    padding-left: 0;
+}
+
+.ft-links a::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background: #e67e22;
+    margin-right: 0;
+    transition: width 0.25s, margin-right 0.25s;
+}
+
+.ft-links a:hover {
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.ft-links a:hover::before {
+    width: 14px;
+    margin-right: 6px;
+}
+
+/* Contact list */
+.ft-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ft-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.9rem;
+    color: rgba(200, 216, 236, 0.78);
+}
+
+.ft-contact li > i {
+    color: #e67e22;
+    font-size: 1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+}
+
+.ft-contact a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(200, 216, 236, 0.78);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.ft-contact a i {
+    color: #e67e22;
+    font-size: 1rem;
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+}
+
+.ft-contact a:hover {
+    color: #fff;
+}
+
+.ft-contact a:hover i {
+    color: #f5a623;
+}
+
+/* ── Service Areas Strip ── */
+.ft-areas {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.ft-area-block {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+}
+
+.ft-area-block h5 {
+    margin: 0 0 0.55rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: rgba(237, 244, 255, 0.92);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.ft-area-block h5 i {
+    font-size: 0.78rem;
+    opacity: 0.7;
+}
+
+.ft-area-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.ft-area-block li {
+    background: rgba(13, 27, 42, 0.6);
+    border: 1px solid rgba(200, 216, 236, 0.18);
+    border-radius: 999px;
+    padding: 0.22rem 0.6rem;
+    font-size: 0.76rem;
+    color: rgba(200, 216, 236, 0.82);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.ft-area-block li:hover {
+    border-color: rgba(230, 126, 34, 0.45);
+    color: #fff;
+}
+
+.ft-area-services li {
+    border-color: rgba(245, 166, 35, 0.3);
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.ft-area-services li:hover {
+    border-color: rgba(245, 166, 35, 0.6);
+}
+
+/* ── Bottom Bar ── */
+.ft-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.15rem 0;
+}
+
+.ft-bottom-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ft-bottom-inner > p {
+    justify-self: start;
+}
+
+.ft-bottom-inner .ft-bottom-links {
+    justify-self: end;
+}
+
+.ft-bottom p {
+    margin: 0;
+    font-size: 0.82rem;
+    color: rgba(200, 216, 236, 0.5);
+}
+
+.ft-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.ft-bottom-links a {
+    font-size: 0.82rem;
+    color: rgba(200, 216, 236, 0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.ft-bottom-links a:hover {
+    color: #fff;
+}
+/* Developed by Penta logo – footer credit (centered) */
+.ft-developed {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: rgba(200, 216, 236, 0.45);
+    white-space: nowrap;
+    justify-self: center;
+}
+
+.ft-developed .ft-dev-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ft-developed .ft-dev-logo {
+    height: 22px;
+    width: auto;
+    opacity: 0.85;
+    vertical-align: middle;
+}
+
+.ft-developed .ft-dev-link:hover .ft-dev-logo {
+    opacity: 1;
+}
+
+/* footer-bottom (location/services pages) */
+.footer-bottom .ft-developed {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom .ft-developed .ft-dev-logo {
+    height: 20px;
+}
+
+@media (max-width: 576px) {
+    .ft-bottom-inner {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .ft-bottom-inner > p,
+    .ft-bottom-inner .ft-bottom-links {
+        justify-self: center;
+    }
+}
+
+
+
+/* ── Compact variant (TV page) ── */
+.footer-v2-compact .ft-body {
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+}
+
+.footer-v2-compact .ft-areas {
+    grid-template-columns: 1fr;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE – Tablet & Mobile
+   ═══════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .ft-body {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1.5rem;
+    }
+
+    .ft-brand {
+        grid-column: 1 / -1;
+    }
+
+    .ft-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-v2-compact .ft-body {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ft-cta-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .ft-cta-btns {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ft-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.84rem;
+    }
+
+    .ft-body {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem 1.25rem;
+        padding: 2.25rem 0 1.75rem;
+    }
+
+    .ft-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .ft-brand .ft-social {
+        justify-content: center;
+    }
+
+    .ft-social-sm {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    .ft-contact-col .ft-social-sm {
+        justify-content: flex-start;
+    }
+
+    .footer-v2-compact .ft-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-v2 {
+        font-size: 0.88rem;
+    }
+
+    .ft-cta {
+        padding: 1.25rem 0;
+    }
+
+    .ft-cta-text h3 {
+        font-size: 1.15rem;
+    }
+
+    .ft-cta-btns {
+        flex-wrap: wrap;
+    }
+
+    .ft-btn {
+        font-size: 0.82rem;
+        padding: 0.55rem 0.7rem;
+    }
+
+    .ft-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 0 1.5rem;
+    }
+
+    .ft-brand {
+        text-align: left;
+    }
+
+    .ft-brand .ft-social {
+        justify-content: flex-start;
+    }
+
+    .footer-v2 h4 {
+        font-size: 0.92rem;
+        margin-bottom: 1rem;
+    }
+
+    .ft-links a {
+        font-size: 0.86rem;
+    }
+
+    .ft-area-block {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .ft-area-block h5 {
+        font-size: 0.78rem;
+    }
+
+    .ft-area-block li {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .ft-bottom-inner {
+        flex-direction: column;
+        gap: 0.6rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .ft-cta-btns {
+        flex-direction: column;
+    }
+
+    .ft-btn {
+        width: 100%;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   Legacy footer compat – prevent old .footer styles
+   from conflicting with .footer-v2
+   ═══════════════════════════════════════════════════ */
+.footer.footer-v2 {
+    padding: 0;
+}
+
+.footer.footer-v2::before {
+    display: none;
+}
+
+.footer.footer-v2 h4::after {
+    bottom: 0;
+    width: 28px;
+    height: 2px;
+}
+
+/* Responsive Styles (non-footer) */
+@media (max-width: 992px) {
+    .cta-section h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .faq-question h4 {
+        font-size: 1.1rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+}
+
+
+/* =========================================================
+   Footer v2 – Compact Mobile Redesign (project-wide)
+   ========================================================= */
+@media (max-width: 576px) {
+    .ft-cta {
+        padding: 0.95rem 0;
+    }
+
+    .ft-cta-text h3 {
+        font-size: 1rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .ft-cta-text p {
+        font-size: 0.82rem;
+        margin: 0;
+    }
+
+    .ft-cta-btns {
+        flex-wrap: wrap;
+        gap: 0.45rem;
+    }
+
+    .ft-btn {
+        font-size: 0.78rem;
+        padding: 0.5rem 0.62rem;
+        border-radius: 9px;
+    }
+
+    .ft-btn i {
+        font-size: 0.8rem;
+    }
+
+    .ft-body {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 0.9rem;
+        padding: 1.35rem 0 1.15rem;
+    }
+
+    .ft-brand,
+    .ft-contact-col {
+        grid-column: 1 / -1;
+    }
+
+    .ft-brand {
+        text-align: left;
+    }
+
+    .ft-brand .ft-logo {
+        max-height: 54px;
+        margin-bottom: 0.55rem;
+    }
+
+    .ft-brand > p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 0.7rem;
+        color: rgba(200, 216, 236, 0.72);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .ft-brand .ft-social {
+        justify-content: flex-start;
+        gap: 0.45rem;
+    }
+
+    .ft-social a {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .footer-v2 h4 {
+        font-size: 0.82rem;
+        margin-bottom: 0.65rem;
+        padding-bottom: 0.45rem;
+    }
+
+    .ft-links li {
+        margin-bottom: 0.42rem;
+    }
+
+    .ft-links a {
+        font-size: 0.82rem;
+        line-height: 1.25;
+    }
+
+    .ft-contact li {
+        margin-bottom: 0.55rem;
+        gap: 0.55rem;
+        font-size: 0.82rem;
+    }
+
+    .ft-contact a {
+        font-size: 0.82rem;
+        gap: 0.55rem;
+    }
+
+    .ft-area-block {
+        padding: 0.58rem 0.62rem;
+        border-radius: 10px;
+    }
+
+    .ft-area-block h5 {
+        font-size: 0.72rem;
+        margin-bottom: 0.42rem;
+    }
+
+    .ft-area-block li {
+        font-size: 0.67rem;
+        padding: 0.16rem 0.42rem;
+    }
+
+    .ft-bottom {
+        padding: 0.75rem 0;
+    }
+
+    .ft-bottom-inner {
+        flex-direction: column;
+        gap: 0.35rem;
+        text-align: center;
+    }
+
+    .ft-bottom p,
+    .ft-bottom-links a {
+        font-size: 0.74rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .ft-body {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+}
+
+
+/* =========================================================
+   Footer v2 – Ultra Compact Mobile Mode
+   ========================================================= */
+@media (max-width: 576px) {
+    .footer-v2 {
+        --ft-mobile-pad-x: 0.95rem;
+    }
+
+    .footer-v2 .container {
+        padding-left: var(--ft-mobile-pad-x);
+        padding-right: var(--ft-mobile-pad-x);
+    }
+
+    /* Keep CTA action-first and compact */
+    .ft-cta {
+        padding: 0.72rem 0;
+    }
+
+    .ft-cta-inner {
+        gap: 0.6rem;
+    }
+
+    .ft-cta-text h3 {
+        font-size: 0.95rem;
+        margin: 0;
+        letter-spacing: 0;
+    }
+
+    .ft-cta-text p {
+        display: none;
+    }
+
+    .ft-cta-btns {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.42rem;
+    }
+
+    .ft-btn {
+        min-height: 38px;
+        padding: 0.44rem 0.46rem;
+        font-size: 0.74rem;
+        border-radius: 8px;
+        gap: 0.25rem;
+    }
+
+    .ft-btn i {
+        font-size: 0.74rem;
+    }
+
+    /* Smart compact body layout */
+    .ft-body {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem 0.85rem;
+        padding: 1.05rem 0 0.9rem;
+    }
+
+    .ft-brand,
+    .ft-contact-col {
+        grid-column: 1 / -1;
+    }
+
+    .ft-brand .ft-logo {
+        max-height: 48px;
+        margin-bottom: 0.45rem;
+    }
+
+    .ft-brand > p {
+        font-size: 0.78rem;
+        line-height: 1.34;
+        margin-bottom: 0.52rem;
+        -webkit-line-clamp: 2;
+    }
+
+    .ft-brand .ft-social {
+        gap: 0.4rem;
+    }
+
+    .ft-social a {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+    }
+
+    .footer-v2 h4 {
+        font-size: 0.78rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.35rem;
+        letter-spacing: 0.02em;
+    }
+
+    .ft-links li {
+        margin-bottom: 0.34rem;
+    }
+
+    .ft-links a {
+        font-size: 0.78rem;
+        line-height: 1.2;
+    }
+
+    .ft-contact li {
+        margin-bottom: 0.46rem;
+        gap: 0.48rem;
+        font-size: 0.78rem;
+    }
+
+    .ft-contact li > i,
+    .ft-contact a i {
+        font-size: 0.85rem;
+        width: 14px;
+    }
+
+    .ft-contact a {
+        gap: 0.48rem;
+        font-size: 0.78rem;
+    }
+
+    .ft-social-sm {
+        margin-top: 0.55rem;
+    }
+
+    /* Chips are useful on desktop; hide on mobile for concise footer */
+    .ft-areas {
+        display: none;
+    }
+
+    .ft-bottom {
+        padding: 0.62rem 0;
+    }
+
+    .ft-bottom-inner {
+        gap: 0.28rem;
+    }
+
+    .ft-bottom p,
+    .ft-bottom-links a {
+        font-size: 0.7rem;
+    }
+
+    .ft-bottom-links {
+        gap: 0.9rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .ft-cta-btns {
+        grid-template-columns: 1fr;
+    }
+
+    .ft-btn {
+        width: 100%;
+    }
+
+    .ft-body {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+}
+
+
+/* =========================================================
+   Footer v2 – Professional Mobile Refinement (final)
+   ========================================================= */
+@media (max-width: 576px) {
+    .footer-v2 {
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* 1) CTA: ultra concise, conversion-first */
+    .footer-v2 .ft-cta {
+        padding: 0.62rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-v2 .ft-cta-inner {
+        gap: 0.5rem;
+    }
+
+    .footer-v2 .ft-cta-text h3 {
+        font-size: 0.9rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .footer-v2 .ft-cta-text p {
+        display: none;
+    }
+
+    .footer-v2 .ft-cta-btns {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.35rem;
+    }
+
+    .footer-v2 .ft-btn {
+        min-height: 36px;
+        border-radius: 8px;
+        padding: 0.4rem 0.45rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        gap: 0.2rem;
+    }
+
+    .footer-v2 .ft-btn i {
+        font-size: 0.72rem;
+    }
+
+    /* 2) Body: smart compact cards */
+    .footer-v2 .ft-body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+        padding: 0.8rem 0 0.75rem;
+    }
+
+    .footer-v2 .ft-col {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 0.65rem 0.62rem;
+    }
+
+    .footer-v2 .ft-brand,
+    .footer-v2 .ft-contact-col {
+        grid-column: 1 / -1;
+    }
+
+    .footer-v2 .ft-brand .ft-logo {
+        max-height: 44px;
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-v2 .ft-brand > p {
+        margin: 0 0 0.52rem;
+        font-size: 0.76rem;
+        line-height: 1.32;
+        color: rgba(212, 225, 245, 0.78);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .footer-v2 .ft-brand .ft-social {
+        gap: 0.35rem;
+    }
+
+    .footer-v2 .ft-social a {
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        font-size: 0.84rem;
+    }
+
+    /* Hide duplicate social block in contact card on phones */
+    .footer-v2 .ft-social-sm {
+        display: none !important;
+    }
+
+    .footer-v2 h4 {
+        font-size: 0.74rem;
+        letter-spacing: 0.03em;
+        margin: 0 0 0.42rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .footer-v2 h4::after {
+        width: 22px;
+    }
+
+    .footer-v2 .ft-links li {
+        margin-bottom: 0.22rem;
+    }
+
+    .footer-v2 .ft-links a {
+        font-size: 0.76rem;
+        line-height: 1.2;
+        padding: 0.1rem 0;
+    }
+
+    .footer-v2 .ft-links a::before {
+        display: none;
+    }
+
+    .footer-v2 .ft-links a:hover {
+        transform: none;
+    }
+
+    .footer-v2 .ft-contact li {
+        margin-bottom: 0.4rem;
+        gap: 0.42rem;
+        font-size: 0.76rem;
+    }
+
+    .footer-v2 .ft-contact li > i,
+    .footer-v2 .ft-contact a i {
+        width: 13px;
+        font-size: 0.8rem;
+    }
+
+    .footer-v2 .ft-contact a {
+        font-size: 0.76rem;
+        gap: 0.42rem;
+    }
+
+    /* 3) Remove non-critical chip strip on mobile */
+    .footer-v2 .ft-areas {
+        display: none;
+    }
+
+    /* 4) Bottom bar compact */
+    .footer-v2 .ft-bottom {
+        padding: 0.52rem 0;
+    }
+
+    .footer-v2 .ft-bottom-inner {
+        gap: 0.22rem;
+    }
+
+    .footer-v2 .ft-bottom p,
+    .footer-v2 .ft-bottom-links a {
+        font-size: 0.68rem;
+    }
+
+    .footer-v2 .ft-bottom-links {
+        gap: 0.7rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-v2 .ft-cta-btns {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-v2 .ft-body {
+        grid-template-columns: 1fr;
+        gap: 0.55rem;
+    }
+}

@@ -1,0 +1,273 @@
+/**
+ * Modern Service Blocks Styles for Pentariver website
+ * Contains styles for service page header, service content blocks, and service sections
+ */
+
+/* Page Header Styles */
+.page-header {
+    position: relative;
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, #2c3e50 0, #34495e 100%);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Page Header Background Overlay */
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: .2;
+    z-index: 0;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Service Content Styles */
+.service-content {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.service-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Service Content Heading Underline */
+.service-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #e67e22, #3498db);
+}
+
+.service-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem;
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Service List Styles */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.service-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: .8rem;
+    padding: .5rem 0;
+}
+
+.service-list li i {
+    color: #e67e22;
+    margin-right: 1rem;
+    font-size: 1rem;
+    margin-top: .3rem;
+}
+
+/* Service Image Styles */
+.service-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+
+.service-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Service Button Styles */
+.service-content .btn {
+    display: inline-block;
+    padding: .8rem 1.8rem;
+    background: linear-gradient(135deg, #e67e22 0, #d35400 100%);
+    color: #fff;
+    border: 0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all .3s ease;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+    margin-top: 1rem;
+}
+
+.service-content .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 126, 34, 0.4);
+    background: linear-gradient(135deg, #f39c12 0, #e67e22 100%);
+}
+
+/* Section Styles */
+.section.bg-light {
+    background-color: #f8f9fa;
+}
+
+.section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+/* Section Background Elements */
+.section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.05) 0, rgba(52, 152, 219, 0.05) 100%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0, rgba(230, 126, 34, 0.05) 100%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Header Styles */
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Section Header Underline */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #e67e22, #3498db);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .page-header h1 {
+        font-size: 3rem;
+    }
+    
+    .service-content {
+        margin-bottom: 2rem;
+    }
+    
+    .service-image {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .service-content h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .service-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}

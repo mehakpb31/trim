@@ -1,0 +1,407 @@
+/**
+ * Modern UI CSS for Pentariver website
+ * Contains advanced UI effects, animations, and modern design elements
+ */
+
+/* Parallax Effect Styles */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(0);
+    transition: transform .1s ease-out;
+}
+
+/* Enhanced Service Card Styles */
+.service-card {
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0, rgba(230, 126, 34, 0.1) 100%);
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced Button Styles with Animation */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: all .6s ease;
+}
+
+.btn:hover::after {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--secondary-color) 0, #d35400 100%);
+    border: 0;
+}
+
+.btn-outline {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--secondary-color);
+    transition: width .3s ease;
+    z-index: -1;
+}
+
+.btn-outline:hover {
+    color: var(--text-light);
+}
+
+.btn-outline:hover::before {
+    width: 100%;
+}
+
+/* Asymmetric Grid Layout */
+.asymmetric-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item-1 {
+    grid-column: span 8;
+    grid-row: span 1;
+}
+
+.grid-item-2 {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.grid-item-3 {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.grid-item-4 {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.grid-item-5 {
+    grid-column: span 12;
+    grid-row: span 1;
+}
+
+/* Micro-interaction Styles */
+.micro-interaction {
+    transition: all .3s ease;
+}
+
+.micro-interaction:hover {
+    transform: scale(1.05);
+}
+
+/* Icon Animation */
+.icon-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d35400;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-color) 0, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* 3D Card Effect */
+.card-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card-3d-inner {
+    transition: transform .6s;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-3d-inner {
+    transform: rotateY(10deg) rotateX(10deg);
+}
+
+/* Animated Underline Effect */
+.animated-underline {
+    position: relative;
+    text-decoration: none;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .3s ease-out;
+}
+
+.animated-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Modern Form Input Styles */
+.modern-input {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.modern-input input,
+.modern-input textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-color);
+    border: 0;
+    border-bottom: 2px solid #ddd;
+    outline: 0;
+    background: transparent;
+    transition: border-color .3s ease;
+}
+
+.modern-input label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .3s ease all;
+}
+
+.modern-input input:focus,
+.modern-input textarea:focus {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.modern-input input:focus ~ label,
+.modern-input textarea:focus ~ label,
+.modern-input input:not(:placeholder-shown) ~ label,
+.modern-input textarea:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+/* Floating Animation */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Page Loader Animation */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 9999;
+    transition: opacity .5s ease, visibility .5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    z-index: 9999;
+    transition: width .1s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .asymmetric-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .grid-item-1 {
+        grid-column: span 6;
+    }
+    
+    .grid-item-2 {
+        grid-column: span 3;
+    }
+    
+    .grid-item-3 {
+        grid-column: span 3;
+    }
+    
+    .grid-item-4 {
+        grid-column: span 6;
+    }
+    
+    .grid-item-5 {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .asymmetric-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+    
+    .grid-item-1,
+    .grid-item-2,
+    .grid-item-3,
+    .grid-item-4,
+    .grid-item-5 {
+        grid-column: span 1;
+    }
+}

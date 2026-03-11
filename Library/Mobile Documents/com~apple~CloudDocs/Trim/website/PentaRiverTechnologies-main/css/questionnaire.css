@@ -1,0 +1,126 @@
+/* Questionnaire Feature Cards Styling */
+.features-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.feature-label {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+}
+
+.feature-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.feature-checkbox-custom {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    height: 24px;
+    width: 24px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.feature-checkbox:checked ~ .feature-checkbox-custom {
+    background-color: #ff7a00;
+    border-color: #ff7a00;
+}
+
+.feature-checkbox:checked ~ .feature-checkbox-custom:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.feature-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Icon colors */
+.contact-icon {
+    background-color: #ff7a00;
+}
+
+.gallery-icon {
+    background-color: #3498db;
+}
+
+.blog-icon {
+    background-color: #2ecc71;
+}
+
+.social-icon {
+    background-color: #9b59b6;
+}
+
+.newsletter-icon {
+    background-color: #f1c40f;
+}
+
+.ecommerce-icon {
+    background-color: #e74c3c;
+}
+
+.booking-icon {
+    background-color: #1abc9c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

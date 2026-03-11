@@ -1,0 +1,508 @@
+/**
+ * Service Page Styles — Shared across all individual service detail pages
+ * Penta River Technologies
+ */
+
+/* ── Hero Banner ── */
+.service-hero {
+    position: relative;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0d1f3c 100%);
+    padding: 120px 0 60px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.service-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, .12) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(230, 126, 34, .08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.service-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.service-hero .breadcrumb {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .6);
+    margin-bottom: 1.5rem;
+}
+
+.service-hero .breadcrumb a {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.service-hero .breadcrumb a:hover {
+    color: #e67e22;
+}
+
+.service-hero .breadcrumb .sep {
+    margin: 0 .25rem;
+}
+
+.service-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff, #cce0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-hero p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, .8);
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.service-hero .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.service-hero .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(8px);
+}
+
+.service-hero .hero-badge i {
+    color: #e67e22;
+}
+
+/* ── Service Detail Blocks ── */
+.svc-section {
+    padding: 80px 0;
+}
+
+.svc-section.alt-bg {
+    background-color: #f8f9fc;
+}
+
+.svc-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.svc-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.svc-text {
+    flex: 1 1 420px;
+    min-width: 300px;
+}
+
+.svc-text h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: .5rem;
+    position: relative;
+    padding-bottom: .75rem;
+}
+
+.svc-text h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #e67e22, #3498db);
+}
+
+.svc-text h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 1.5rem 0 .75rem;
+}
+
+.svc-text p {
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.svc-text .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+}
+
+.svc-text .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    padding: .5rem 0;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.svc-text .check-list li i {
+    color: #e67e22;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.svc-images {
+    flex: 1 1 350px;
+    min-width: 280px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.svc-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .1);
+    transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.svc-images img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+}
+
+/* ── Service Areas Grid ── */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.area-card {
+    padding: 1.75rem;
+    background: #fff;
+    border-radius: 12px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+}
+
+.area-card h4 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.1rem;
+    color: #1a2744;
+    margin-bottom: .5rem;
+}
+
+.area-card h4 i {
+    color: #3498db;
+}
+
+.area-card p {
+    color: #5a6577;
+    font-size: .95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.area-card .sub-areas {
+    margin-top: .75rem;
+    font-size: .85rem;
+    color: #7a8599;
+}
+
+/* ── Why Choose Us Features ── */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-card h4 {
+    color: #1a2744;
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    color: #5a6577;
+    font-size: .95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── FAQ Section ── */
+.faq-list {
+    max-width: 820px;
+    margin: 2rem auto 0;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    border: 1px solid #edf0f5;
+    transition: box-shadow .3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    gap: 1rem;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a2744;
+    font-family: inherit;
+}
+
+.faq-question i {
+    transition: transform .3s;
+    color: #3498db;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, padding .3s;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 1.5rem 1.25rem;
+}
+
+.faq-answer p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── CTA Banner ── */
+.svc-cta {
+    background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+    padding: 70px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.svc-cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.svc-cta p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, .8);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+.svc-cta .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── Related Services ── */
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.related-card {
+    padding: 1.75rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .06);
+    text-align: center;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease;
+    display: block;
+}
+
+.related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+}
+
+.related-card i {
+    font-size: 2rem;
+    color: #e67e22;
+    margin-bottom: .75rem;
+    display: block;
+}
+
+.related-card h4 {
+    color: #1a2744;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ── Process Steps/Timeline ── */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    counter-reset: step;
+}
+
+.process-step {
+    position: relative;
+    text-align: center;
+    padding: 2rem 1.25rem 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .06);
+}
+
+.process-step::before {
+    counter-increment: step;
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 1rem;
+}
+
+.process-step h4 {
+    color: #1a2744;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.process-step p {
+    color: #5a6577;
+    font-size: .9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+
+    .svc-block,
+    .svc-block.reverse {
+        flex-direction: column;
+    }
+
+    .svc-images {
+        max-width: 100%;
+        order: -1;
+    }
+
+    .service-hero {
+        padding: 100px 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .svc-section {
+        padding: 50px 0;
+    }
+
+    .service-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .features-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}

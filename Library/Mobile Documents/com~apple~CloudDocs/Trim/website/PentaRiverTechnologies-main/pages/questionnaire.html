@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17960725739"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17960725739');
+  </script>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Website Project Questionnaire | Penta River Technologies</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <meta
+        content="Fill out our website project questionnaire to help us understand your requirements better and create the perfect website for your business."
+        name="description" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/modern-ui.css" rel="stylesheet" />
+    <link href="../css/modern-contact.css" rel="stylesheet" />
+    <link href="../css/modern-general.css" rel="stylesheet" />
+    <link href="../css/form-styles.css" rel="stylesheet" />
+    <link href="../css/questionnaire.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img alt="Penta River Technologies Logo" src="../images/pentaLogo.png" />
+                    </a>
+                </div>
+                <nav class="nav">
+                    <div class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="trimlight-kamloops.html#trimlight-hero">Trimlight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Page Header Section -->
+    <section class="page-header">
+        <div class="container">
+            <br /><br />
+            <h1>Website Requirements Form</h1>
+            <p>Help us understand your project requirements better.</p>
+        </div>
+    </section>
+    <!-- Questionnaire Section -->
+    <section class="section">
+        <div class="container">
+            <div class="questionnaire-container animate">
+                <p class="intro">Thank you for your interest in our website development services. Please fill out this
+                    form to help us understand your project requirements better. This information will help us create a
+                    website that perfectly meets your needs.</p>
+
+                <div class="form-group" id="custom-image-upload">
+                    <h2>Upload Images (Logo + Website Images)</h2>
+                    <label for="logoUpload"><b>Upload Your Logo:</b></label><small>Accepted formats: JPG, PNG, GIF (Max
+                        size: 5MB)</small>
+                    <input accept="image/*" id="logoUpload" type="file" /><br /><br />
+                    <label for="multiImageUpload"><b>Upload Website Images:</b></label><small>You can select multiple
+                        files. Accepted formats: JPG, PNG, GIF (Max size: 5MB
+                        each)</small>
+                    <input accept="image/*" id="multiImageUpload" multiple="" type="file" /><br /><br />
+                </div>
+                <form id="website-form" action="https://api.web3forms.com/submit" method="POST"
+                    enctype="multipart/form-data" id="website-form"><input id="logoUrl" name="logo_url"
+                        type="hidden" /><input id="galleryUrls" name="gallery_urls" type="hidden" />
+                    <input type="hidden" name="access_key" value="df36666d-9051-4de6-95d8-b8de6821d63a" />
+                    <input name="subject" type="hidden"
+                        value="New Website Project Questionnaire Submission - Penta River Technologies" />
+                    <input name="from_name" type="hidden" value="Penta River Technologies Website" />
+                    <input class="hidden" name="botcheck" style="display: none;" type="checkbox" />
+                    <input name="redirect" type="hidden" value="https://web3forms.com/success" />
+                    <section class="form-section">
+                        <h2>Contact Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="business-name"><b>Business Name *</b></label>
+                                <input id="business-name" name="business-name" required="" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name"><b>Contact Person's Name *</b></label>
+                                <input id="contact-name" name="contact-name" required="" type="text" />
+                            </div>
+                        </div><br />
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email"><b>Email Address *</b></label>
+                                <input id="email" name="email" required="" type="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><b>Phone Number *</b></label>
+                                <input id="phone" name="phone" required="" type="tel" />
+                            </div>
+                        </div><br />
+                        <div class="form-group">
+                            <label for="address"><b>Business Address</b></label>
+                            <textarea id="address" name="address" rows="3"></textarea>
+                        </div>
+                    </section>
+                    <br /><br />
+                    <section class="form-section">
+                        <h2>Website Requirements</h2>
+                        <div class="form-group">
+                            <label for="project-description"><b>Brief Description of Your Business *</b></label>
+                            <textarea id="project-description" name="project-description" required=""
+                                rows="4"></textarea>
+                        </div><br />
+                        <div class="form-group">
+                            <label for="website-purpose"><b>What is the main purpose of your website? *</b></label>
+                            <textarea id="website-purpose" name="website-purpose" required="" rows="3"></textarea>
+                        </div><br />
+                        <div class="form-group">
+                            <label for="pages-needed"><b>How many pages do you need for your website? *</b></label>
+                            <select id="pages-needed" name="pages-needed" required="">
+                                <option value="">Please select</option>
+                                <option value="1-3">1-3 pages (Simple)</option>
+                                <option value="4-6">4-6 pages (Standard)</option>
+                                <option value="7-10">7-10 pages (Comprehensive)</option>
+                                <option value="10+">More than 10 pages (Complex)</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="page-names"><b>List the name of pages *</b></label>
+                            <textarea id="page-names" name="page-names"
+                                placeholder="Example: Home, About Us, Services, Contact Us" required=""
+                                rows="3"></textarea>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label class="features-heading"><b>What features do you need on your website?</b></label>
+                            <div class="features-grid">
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox"
+                                            value="contact-form" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <span class="feature-text">Contact Form</span>
+                                    </label>
+                                </div>
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox"
+                                            value="photo-gallery" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon gallery-icon">
+                                            <i class="fas fa-images"></i>
+                                        </div>
+                                        <span class="feature-text">Photo Gallery</span>
+                                    </label>
+                                </div>
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox" value="blog" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon blog-icon">
+                                            <i class="fas fa-blog"></i>
+                                        </div>
+                                        <span class="feature-text">Blog</span>
+                                    </label>
+                                </div>
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox"
+                                            value="social-media" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon social-icon">
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                        <span class="feature-text">Social Media Integration</span>
+                                    </label>
+                                </div>
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox"
+                                            value="newsletter" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon newsletter-icon">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </div>
+                                        <span class="feature-text">Newsletter Signup</span>
+                                    </label>
+                                </div>
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox"
+                                            value="e-commerce" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon ecommerce-icon">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <span class="feature-text">E-commerce/Online Store</span>
+                                    </label>
+                                </div>
+                                <div class="feature-card">
+                                    <label class="feature-label">
+                                        <input class="feature-checkbox" name="features" type="checkbox"
+                                            value="booking" />
+                                        <span class="feature-checkbox-custom"></span>
+                                        <div class="feature-icon booking-icon">
+                                            <i class="fas fa-calendar-check"></i>
+                                        </div>
+                                        <span class="feature-text">Booking/Appointment System</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div><br />
+                        <div class="form-group">
+                            <label for="competitor-websites"><b>Please list websites of competitors or websites you like
+                                    (include URLs)</b></label>
+                            <textarea id="competitor-websites" name="competitor-websites"
+                                placeholder="Example: https://example.com - I like their layout and color scheme"
+                                rows="3"></textarea>
+                        </div>
+                    </section><br />
+                    <section class="form-section">
+                        <h2>Design Preferences</h2>
+                        <div class="form-group">
+                            <label for="color-preferences"><b>Do you have specific color preferences for your
+                                    website?</b></label>
+                            <textarea id="color-preferences" name="color-preferences"
+                                placeholder="Example: Our brand colors are blue and orange" rows="2"></textarea>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="design-style"><b>What style best describes your preference for the
+                                    website?</b></label>
+                            <select id="design-style" name="design-style">
+                                <option value="">Please select</option>
+                                <option value="modern">Modern and Minimalist</option>
+                                <option value="traditional">Traditional/Classic</option>
+                                <option value="bold">Bold and Colorful</option>
+                                <option value="corporate">Corporate/Professional</option>
+                                <option value="creative">Creative/Artistic</option>
+                                <option value="not-sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </section>
+                    <br />
+                    <section class="form-section">
+                        <h2>Timeline</h2>
+                        <div class="form-group">
+                            <label for="timeline"><b>When would you like your website to be completed?</b></label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Please select</option>
+                                <option value="1-week">Within 1 Week</option>
+                                <option value="2-weeks">Within 2 Weeks</option>
+                                <option value="3-weeks">Within 3 Weeks</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </section>
+                    <br />
+                    <section class="form-section">
+                        <h2>Additional Information</h2>
+                        <div class="form-group">
+                            <label for="additional-info"><b>Is there anything else you would like us to know about your
+                                    project?</b></label>
+                            <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="questions"><b>Do you have any questions for us?</b></label>
+                            <textarea id="questions" name="questions" rows="3"></textarea>
+                        </div>
+                    </section>
+                    <br />
+                    <div class="form-actions">
+                        <button class="btn-submit" type="submit">Submit Questionnaire</button>
+                    </div>
+                    <div class="mt-3" id="form-result"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2 class="animate">Have Questions?</h2>
+            <p class="animate">If you need assistance with filling out this questionnaire or have any questions about
+                our website development services, please don't hesitate to contact us.</p>
+            <div class="cta-buttons animate">
+                <a class="btn btn-primary btn-lg" href="tel:+17788599159">Call Us Now</a>
+                <a class="btn btn-outline btn-lg" href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+  <footer class="footer footer-v2">
+    <div class="ft-cta">
+      <div class="container ft-cta-inner">
+        <div class="ft-cta-text">
+          <h3>Ready to get started?</h3>
+          <p>Contact us today for a free consultation and discover how we can help.</p>
+        </div>
+        <div class="ft-cta-btns">
+          <a href="tel:+17788599159" class="ft-btn ft-btn-call"><i class="fas fa-phone"></i> Call Now</a>
+          <a href="https://wa.me/17788599159" class="ft-btn ft-btn-wa" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="contact.html" class="ft-btn ft-btn-quote"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="container ft-body">
+      <div class="ft-col ft-brand">
+        <img alt="Penta River Technologies" class="ft-logo" src="../images/pentaLogo.png" />
+        <p>Canada&rsquo;s premier IT support provider &mdash; network infrastructure, connectivity solutions, and permanent lighting.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/share/1DGmdAw676/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/pentarivertech?igsh=MXdwdnd5dW5na2lhcQ==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul class="ft-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="trimlight-kamloops.html#trimlight-hero">Trimlight</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul class="ft-links">
+          <li><a href="services.html#telecom">Managed IT</a></li>
+          <li><a href="services.html#network">Network Solutions</a></li>
+          <li><a href="services.html#security">Security Systems</a></li>
+          <li><a href="services.html#hardware">Hardware &amp; Installs</a></li>
+          <li><a href="trimlight-kamloops.html#trimlight-hero">Permanent Lighting</a></li>
+        </ul>
+      </div>
+      <div class="ft-col ft-contact-col">
+        <h4>Contact Us</h4>
+        <ul class="ft-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Langley, Kamloops, Kelowna, BC</span>
+          </li>
+          <li>
+            <a href="tel:+17788599159"><i class="fas fa-phone"></i> <span>+1 778 859 9159</span></a>
+          </li>
+          <li>
+            <a href="mailto:info@pentarivertech.com"><i class="fas fa-envelope"></i> <span>info@pentarivertech.com</span></a>
+          </li>
+        </ul>
+        <div class="ft-social ft-social-sm">
+          <a href="https://www.facebook.com/share/1DGmdAw676/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/pentarivertech?igsh=MXdwdnd5dW5na2lhcQ==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="container ft-bottom-inner">
+        <p>&copy; 2025 Penta River Technologies. All Rights Reserved.</p>
+        <span class="ft-developed">Developed by <a href="https://pentarivertech.com" aria-label="Penta River Technologies" class="ft-dev-link"><img src="../images/pentaLogo.png" alt="Penta River Technologies" class="ft-dev-logo" /></a></span>
+        <div class="ft-bottom-links">
+          <a href="contact.html">Privacy</a>
+          <a href="contact.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/modern-ui.js"></script>
+    <script src="../js/questionnaire.js"></script>
+
+</body>
+
+</html>

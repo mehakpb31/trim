@@ -1,0 +1,130 @@
+/**
+ * Service Detail Styles for Pentariver website
+ * Contains styles for individual service detail pages including containers, images, and lists
+ */
+
+/* Service Container Styles */
+.service-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+/* Service Heading Styles */
+.service-container h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Service Heading Underline */
+.service-container h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #e67e22 0, #3498db 100%);
+}
+
+/* Service Flex Layout */
+.service-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Service Content Area */
+.service-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Service Image Container */
+.service-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Service Images */
+.service-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .5s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Service Feature List */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service-list li {
+    padding: 8px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-list li i {
+    color: #e67e22;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* Consultation Button */
+.btn-consultation {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e67e22;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s ease;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-consultation:hover {
+    background-color: #d35400;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .service-flex {
+        flex-direction: column;
+    }
+    
+    .service-image-container {
+        order: -1;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-container {
+        padding: 25px;
+    }
+}
