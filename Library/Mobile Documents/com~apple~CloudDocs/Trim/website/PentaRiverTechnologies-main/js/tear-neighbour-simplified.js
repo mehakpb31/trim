@@ -51,6 +51,8 @@ function initLightingPreview() {
     const carousel = document.getElementById('tearScroll');
     const mainImg = document.getElementById('tearMainImg');
     const mainTitle = document.getElementById('tearMainTitle');
+    const mobileTitle = document.getElementById('tearMobileTitle');
+    const mobileDots = document.getElementById('tearMobileDots');
     const prevBtn = document.getElementById('tearPrevBtn');
     const nextBtn = document.getElementById('tearNextBtn');
 
@@ -119,6 +121,36 @@ function initLightingPreview() {
             bubble.addEventListener('click', () => selectImage(img));
             carousel.appendChild(bubble);
         });
+
+        renderMobileDots();
+    }
+
+    /* ── 1b. Build mobile dot indicators ────────────────────── */
+    function renderMobileDots() {
+        if (!mobileDots) return;
+        mobileDots.innerHTML = '';
+
+        const list = getActiveList();
+        const maxDots = 12;
+        const stride = Math.max(1, Math.ceil(list.length / maxDots));
+
+        list.forEach((img, idx) => {
+            if (idx % stride !== 0 && idx !== list.length - 1) return;
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'preview-mobile-dot' + (img.id === activeImage.id ? ' active' : '');
+            dot.setAttribute('data-id', img.id);
+            dot.setAttribute('aria-label', `Show scene: ${img.title}`);
+            dot.addEventListener('click', () => selectImage(img));
+            mobileDots.appendChild(dot);
+        });
+    }
+
+    function updateMobileDots() {
+        if (!mobileDots) return;
+        mobileDots.querySelectorAll('.preview-mobile-dot').forEach(d => {
+            d.classList.toggle('active', d.getAttribute('data-id') === activeImage.id);
+        });
     }
 
     /* ── 2. Select / preview an image ────────────────────────── */
@@ -138,7 +170,10 @@ function initLightingPreview() {
             mainImg.alt = img.title;
             if (mainImg.complete) mainImg.style.opacity = '1';
             if (mainTitle) mainTitle.textContent = img.title;
+            if (mobileTitle) mobileTitle.textContent = img.title;
         }, 250);
+
+        updateMobileDots();
 
         // scroll the active bubble into view
         const activeBubble = carousel.querySelector('.scene-bubble.active');

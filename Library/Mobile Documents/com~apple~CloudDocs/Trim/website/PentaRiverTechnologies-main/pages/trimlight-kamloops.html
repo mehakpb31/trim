@@ -67,8 +67,8 @@
   "name": "Penta River Technologies",
   "alternateName": "Trimlight Kamloops by Penta River",
   "url": "https://pentarivertech.com/pages/trimlight-kamloops.html",
-  "logo": "/Users/mehakdeep153/Library/Mobile Documents/com~apple~CloudDocs/Trim/website/PentaRiverTechnologies-main/images/trimlight/home/Transparent White.png",
-  "image": "/Users/mehakdeep153/Library/Mobile Documents/com~apple~CloudDocs/Trim/website/PentaRiverTechnologies-main/images/trimlight/home/Transparent White.png",
+  "logo": "https://pentarivertech.com/images/trimlight-combined-on-dark.png",
+  "image": "https://pentarivertech.com/images/trimlight/home/Copy%20of%20201112%2014481%20FOX%20CREEK%20HERRIMAN-110-compressed.jpg",
   "telephone": "+1 672 969 9159",
   "email": "trimlight@pentarivertech.com",
   "priceRange": "$$",
@@ -91,7 +91,33 @@
   "sameAs": [
     "https://www.facebook.com/share/1DGmdAw676/",
     "https://www.instagram.com/pentarivertech"
-  ]
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "38",
+    "bestRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Trimlight Installation Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Trimlight Roofline Installation" },
+        "priceCurrency": "CAD",
+        "price": "22",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "22", "priceCurrency": "CAD", "unitText": "per linear foot" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Trimlight Full Home Package" },
+        "priceCurrency": "CAD",
+        "price": "36",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "36", "priceCurrency": "CAD", "unitText": "per linear foot" }
+      }
+    ]
+  }
 }</script>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -104,7 +130,21 @@
     {"@type": "City", "name": "Langley"},
     {"@type": "City", "name": "Kelowna"}
   ],
-  "serviceType": "Permanent Holiday Lighting"
+  "serviceType": "Permanent Holiday Lighting",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "CAD",
+    "lowPrice": "22",
+    "highPrice": "36",
+    "offerCount": "3",
+    "description": "Per linear foot, installed. Includes lifetime warranty on channel and 5-year LED warranty."
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "38",
+    "bestRating": "5"
+  }
 }</script>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -357,6 +397,11 @@
           weekend, and mood.</p>
       </div>
 
+      <!-- Mobile-only scene title (shown above the stage on phones) -->
+      <div class="preview-mobile-title" aria-hidden="true">
+        <span class="preview-mobile-title-text" id="tearMobileTitle">Loading…</span>
+      </div>
+
       <!-- Full-Bleed Hero Stage -->
       <div class="preview-stage animate">
         <!-- Floating Glassmorphism Tab Bar -->
@@ -388,6 +433,102 @@
         <div class="preview-carousel" id="tearScroll" aria-label="Lighting scenes">
           <!-- Populated by JS -->
         </div>
+      </div>
+
+      <!-- Mobile-only scene dot indicators (under the stage) -->
+      <div class="preview-mobile-dots" id="tearMobileDots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Trimlight Solutions Grid – links to Trimlight.com product pages -->
+  <section class="section trimlight-solutions" id="trimlight-solutions" aria-label="Trimlight Solutions">
+    <div class="container">
+      <div class="solutions-header text-center">
+        <h2 class="animate">Trimlight Solutions</h2>
+        <p class="animate">From holidays to everyday accent lighting — explore the full Trimlight lineup.</p>
+      </div>
+
+      <div class="solutions-grid animate">
+        <a class="solution-card" href="https://trimlight.com/products/permanent-holiday-lighting" target="_blank" rel="noopener noreferrer" aria-label="Holiday Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/holiday.jpg" alt="Holiday Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Holiday Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/security-lighting" target="_blank" rel="noopener noreferrer" aria-label="Security Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/security.jpg" alt="Security Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Security Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/accent-lighting" target="_blank" rel="noopener noreferrer" aria-label="Accent Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/accent.jpg" alt="Accent Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Accent Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/globe-lights" target="_blank" rel="noopener noreferrer" aria-label="Globe Lights on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/globe.jpg" alt="Globe Lights" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Globe Lights</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/patio-lighting" target="_blank" rel="noopener noreferrer" aria-label="Patio Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/patio.jpg" alt="Patio Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Patio Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/pool-cages" target="_blank" rel="noopener noreferrer" aria-label="Pool Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/pool.jpg" alt="Pool Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Pool Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/game-day-lighting" target="_blank" rel="noopener noreferrer" aria-label="Game Day Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/gameday.jpg" alt="Game Day Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Game Day Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/downlighting" target="_blank" rel="noopener noreferrer" aria-label="Downlighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/downlighting.jpg" alt="Downlighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Downlighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="solution-card" href="https://trimlight.com/products/color-changing-landscape-lights" target="_blank" rel="noopener noreferrer" aria-label="Landscape Lighting on Trimlight.com">
+          <img class="solution-card-img" src="../images/trimlight/solutions/landscape.png" alt="Landscape Lighting" loading="lazy">
+          <div class="solution-card-overlay"></div>
+          <div class="solution-card-label">
+            <span class="solution-card-title">Landscape Lighting</span>
+            <i class="fas fa-arrow-up-right-from-square solution-card-arrow" aria-hidden="true"></i>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -965,7 +1106,7 @@
         <ul class="ft-contact">
           <li>
             <i class="fas fa-map-marker-alt"></i>
-            <span>Langley, Kamloops, Kelowna, BC</span>
+            <span>Kamloops, Salmon Arm, Thompson-Nicola</span>
           </li>
           <li>
             <a href="tel:+16729699159"><i class="fas fa-phone"></i> <span>+1 672 969 9159</span></a>
